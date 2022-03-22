@@ -71,15 +71,29 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="incidencias_devoluciones_list_view">
+      <field name="name">incidencias.devoluciones.view.tree</field>
+      <field name="model">incidencias.devoluciones</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="motivoDevolucion"/>
+          <field name="prioridadDevolucion"/>
+          <field name="descripcionDevolucion"/>
+          <field name="fechaDevolucion"/>
+        </tree>
+      </field>
+    </record>
+
     <record model="ir.actions.act_window" id="incidencias_incidencia_action_window">
       <field name="name">incidencias</field>
-      <field name="res_model">incidencias.incidencia</field>
+      <field name="res_model">incidencias.devoluciones</field>
       <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem name="incidencia" id="incidencias_menu_root"/>
 
     <menuitem name="Incidencia" id="incidencias_incidencia_menu" parent="incidencias_menu_root" action="incidencias_incidencia_action_window"/>
+    <menuitem name="Devolucion" id="incidencias_devoluciones_menu" parent="incidencias_menu_root" action="incidencias_devoluciones_action_window"/>
 
   </data>
 </odoo>
