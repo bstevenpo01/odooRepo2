@@ -37,7 +37,7 @@ class devoluciones(models.Model):
     _name = 'incidencias.devoluciones'
     _description = 'Define los atributos de una devolucion'
     
-    motivoDevolucion = fields.Selection(string='Motivo de la devolucion', selection=[('a','Funcionamiento'),('b','Jugabilidad'),('c','Online'),('d','Multijugador')], required=True)
+    motivoDevolucion = fields.Selection(string='Motivo de la devolucion', selection=[('a','Funcionamiento'),('b','Mal estado'),('c','Cambio'),('d','Alquiler')], required=True)
     prioridadDevolucion = fields.Selection(string='Prioridad de la devolucion', selection=[('a','Urgente'),('b','Media'),('c','Baja')])
     descripcionDevolucion = fields.Text(string='descripcion de la devolucion', required=True, help='Escribe una descripcion detallada')
     fechaDevolucion = fields.Date(string='Fecha de la devolucion', required=True, default=fields.Date.today())
