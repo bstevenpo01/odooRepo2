@@ -18,6 +18,8 @@
 #             record.value2 = float(record.value) / 100
 
 
+from odoo import models, fields, api
+
 class incidencia(models.Model):
     _name = 'incidencias.incidencia'
     _description = 'Define los atributos de una incidencia'
