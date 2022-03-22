@@ -56,5 +56,28 @@
     <menuitem name="Server to list" id="incidencias" parent="incidencias.menu_2"
               action="incidencias.action_server"/>
 -->
+
+
+
+    <record model="ir.ui.view" id="incidencias_incidencia_list_view">
+      <field name="name">incidencias.incidencia.view.tree</field>
+      <field name="model">incidencias.incidencia</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="motivoIncidencia"/>
+          <field name="descripcionIncidencia"/>
+          <field name="fechaIncidencia"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="incidencias_incidenciaaction_window">
+      <field name="name">incidencias</field>
+      <field name="res_model">incidencias.incidencia</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Incidencias" id="incidencias_incidencia_menu" parent="incidencias_menu_root" action="incidencias_incidencia_action_window"/>
+
   </data>
 </odoo>
