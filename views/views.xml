@@ -77,6 +77,8 @@
       <field name="view_mode">tree,form</field>
     </record>
 
+    <menuitem name="incidencia" id="incidencias_menu_root"/>
+
     <menuitem name="Incidencia" id="incidencias.incidencia_menu" parent="incidencias.menu_root" action="incidencias.incidencia_action_window"/>
 
   </data>
