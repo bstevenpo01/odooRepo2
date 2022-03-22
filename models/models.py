@@ -24,7 +24,7 @@ class incidencia(models.Model):
 
     motivoIncidencia = fields.Selection(string='Motivo de la incidencia', selelection=[('a','Funcionamiento'),('b','Jugabilidad'),('c','Online'),('d','Multijugador')], required=True)
 
-    descripcionIncidencia = fields.Text(string='descripcion de la incidencia' required=True, help='Escribe una descripcion detallada')
+    descripcionIncidencia = fields.Text(string='descripcion de la incidencia', required=True, help='Escribe una descripcion detallada')
     fechaIncidencia = fields.Date(string='Fecha de la incidencia', required=True, default=fields.Date.today())
 
     #Relacion entre tablas
