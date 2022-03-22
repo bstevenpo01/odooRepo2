@@ -18,7 +18,7 @@
 #             record.value2 = float(record.value) / 100
 
 
-from odoo import models, fields, api, exceptions
+from odoo import models, fields, api
 from datetime import date
 
 class incidencia(models.Model):
