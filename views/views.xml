@@ -96,7 +96,7 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="incidencia" id="incidencias_menu_root"/>
+    <menuitem name="incidencia" id="incidencias_menu_root" web_icon="incidencias,static/description/icon.png"/>
 
     <menuitem name="Incidencia" id="incidencias_incidencia_menu" parent="incidencias_menu_root" action="incidencias_incidencia_action_window"/>
     <menuitem name="Devolucion" id="incidencias_devoluciones_menu" parent="incidencias_menu_root" action="incidencias_devoluciones_action_window"/>
