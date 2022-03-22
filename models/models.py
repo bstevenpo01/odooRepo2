@@ -31,3 +31,16 @@ class incidencia(models.Model):
 
     #Relacion entre tablas
     cliente_id = fields.Many2one('alquileres.cliente', 'cliente.incidencia_id')
+
+
+class devoluciones(models.Model):
+    _name = 'incidencias.devoluciones'
+    _description = 'Define los atributos de una devolucion'
+    
+    motivoDevolucion = fields.Selection(string='Motivo de la devolucion', selection=[('a','Funcionamiento'),('b','Jugabilidad'),('c','Online'),('d','Multijugador')], required=True)
+    prioridadDevolucion = fields.Selection(string='Prioridad de la devolucion', selection=[('a','Urgente'),('b','Media'),('c','Baja')])
+    descripcionDevolucion = fields.Text(string='descripcion de la devolucion', required=True, help='Escribe una descripcion detallada')
+    fechaDevolucion = fields.Date(string='Fecha de la devolucion', required=True, default=fields.Date.today())
+
+    #Relacion entre tablas
+    cliente_id = fields.One2many('alquileres.cliente', 'devoluciones_id')
