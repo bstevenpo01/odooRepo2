@@ -18,3 +18,14 @@
 #             record.value2 = float(record.value) / 100
 
 
+class incidencia(models.Model):
+    _name = 'incidencias.incidencia'
+    _description = 'Define los atributos de una incidencia'
+
+    motivoIncidencia = fields.Selection(string='Motivo de la incidencia', selelection=[('a','Funcionamiento'),('b','Jugabilidad'),('c','Online'),('d','Multijugador')], required=True)
+
+    descripcionIncidencia = fields.Text(string='descripcion de la incidencia' required=True, help='Escribe una descripcion detallada')
+    fechaIncidencia = fields.Date(string='Fecha de la incidencia', required=True, default=fields.Date.today())
+
+    #Relacion entre tablas
+    cliente_id = fields.One2many('alquileres.cliente', 'cliente.incidencia_id')
