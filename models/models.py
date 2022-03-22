@@ -30,4 +30,4 @@ class incidencia(models.Model):
     fechaIncidencia = fields.Date(string='Fecha de la incidencia', required=True, default=fields.Date.today())
 
     #Relacion entre tablas
-    cliente_id = fields.One2many('alquileres.cliente', 'cliente_incidencia_id')
+    cliente_id = fields.Many2one('alquileres.cliente', 'cliente.incidencia_id')
