@@ -30,7 +30,7 @@ class incidencia(models.Model):
     fechaIncidencia = fields.Date(string='Fecha de la incidencia', required=True, default=fields.Date.today())
 
     #Relacion entre tablas
-    cliente_id = fields.Many2one('alquileres.cliente', 'cliente.incidencia_id')
+    devolucion_id = fields.Many2many('incidencias.devoluciones', 'incidencia_id')
 
 
 class devoluciones(models.Model):
@@ -43,4 +43,6 @@ class devoluciones(models.Model):
     fechaDevolucion = fields.Date(string='Fecha de la devolucion', required=True, default=fields.Date.today())
 
     #Relacion entre tablas
-    cliente_id = fields.Many2one('alquileres.cliente', 'cliente.devoluciones_id')
+    incidencia_id = fields.Many2one('incidencias.incidencia', string='incidencia')
+    devoluciones = fields.Many2one('alquileres.cliente', string='Cliente')
+    cliente_id = fields.Many2one('alquileres.cliente', string='Cliente')
