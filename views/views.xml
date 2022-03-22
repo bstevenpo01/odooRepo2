@@ -86,6 +86,12 @@
 
     <record model="ir.actions.act_window" id="incidencias_incidencia_action_window">
       <field name="name">incidencias</field>
+      <field name="res_model">incidencias.incidencia</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="incidencias_devoluciones_action_window">
+      <field name="name">incidencias</field>
       <field name="res_model">incidencias.devoluciones</field>
       <field name="view_mode">tree,form</field>
     </record>
