@@ -43,4 +43,4 @@ class devoluciones(models.Model):
     fechaDevolucion = fields.Date(string='Fecha de la devolucion', required=True, default=fields.Date.today())
 
     #Relacion entre tablas
-    cliente_id = fields.One2many('alquileres.cliente', 'devoluciones_id')
+    cliente_id = fields.Many2one('alquileres.cliente', 'cliente.devoluciones_id')
