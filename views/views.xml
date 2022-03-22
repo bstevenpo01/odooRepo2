@@ -79,7 +79,7 @@
 
     <menuitem name="incidencia" id="incidencias_menu_root"/>
 
-    <menuitem name="Incidencia" id="incidencias.incidencia_menu" parent="incidencias.menu_root" action="incidencias.incidencia_action_window"/>
+    <menuitem name="Incidencia" id="incidencias_incidencia_menu" parent="incidencias_menu_root" action="incidencias_incidencia_action_window"/>
 
   </data>
 </odoo>
